@@ -1,6 +1,7 @@
 @import "../bs4/css/bootstrap.min.css";
-@import "../font-awesome-4.5.0/css/font-awesome.min.css";
 @import "../microgrammad-mediexte/fonts.css";
+@import "../icomoon/style.css";
+
 
 body {
 	background-color: #4A90E2;
@@ -37,10 +38,10 @@ a i:hover {
 		padding-right: 0.3em;
 	}
 	.logo{
-		max-width: 100px;
+		min-width: 100px;
 	}
 	.img_since{
-		max-width: 50px;
+		min-width: 50px;
 	}
 }
 
@@ -57,10 +58,10 @@ a i:hover {
 		padding-right: 0.3em;
 	}
 	.logo{
-		max-width: 175px;
+		min-width: 175px;
 	}
 	.img_since{
-		max-width: 50px;
+		min-width: 50px;
 	}
 }
 @media ( min-width : 768px) and (max-width: 992px) {
@@ -76,10 +77,10 @@ a i:hover {
 		padding-right: 0.3em;
 	}
 	.logo{
-		max-width: 200px;
+		min-width: 200px;
 	}
 	.img_since{
-		max-width: 60px;
+		min-width: 60px;
 	}
 }
 @media ( min-width : 992px) and (max-width: 1200px) {
@@ -95,10 +96,10 @@ a i:hover {
 		padding-right: 0.4em;
 	}
 	.logo {
-		max-width: 250px;
+		min-width: 250px;
 	}
 	.img_since{
-		max-width: 70px;
+		min-width: 70px;
 	}
 }
 
@@ -115,9 +116,9 @@ a i:hover {
 		padding-right: 0.5em;
 	}
 	.logo{
-		max-width: 300px;
+		min-width: 300px;
 	}
 	.img_since{
-		max-width: 70px;
+		min-width: 70px;
 	}
 }
