@@ -2,7 +2,6 @@
 
 @import "../icomoon/style.css";
 
-
 body {
 	font-family: microgrammad-mediexte, Fallback, verdana, sans-serif;
 	color: #fff;
@@ -11,11 +10,6 @@ body {
 .container-fluid {
 	padding-left: 0px;
 	padding-right: 0px;
-	background: url('../images/sx_bg.jpg') no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
 }
 
 a i {
@@ -63,6 +57,17 @@ a {
 @media ( max-width : 480px) {
 	body {
 		font-size: 10px;
+		background-color: #103972;
+	}
+}
+
+@media ( min-width : 480px) {
+	.container-fluid {
+		background: url('../images/sx_bg.jpg') no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
 	}
 }
 
