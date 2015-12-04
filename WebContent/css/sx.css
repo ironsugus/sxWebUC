@@ -2,14 +2,26 @@
 
 @import "../icomoon/style.css";
 
+html, body {
+	height: 100%;
+}
+
+.container-fluid {
+	height: 100%;
+	overflow-y: hidden; /* don't show content that exceeds my height */
+}
+
 body {
 	font-family: microgrammad-mediexte, Fallback, verdana, sans-serif;
-	color: #fff;
+	background-color: gray;
 }
 
 .container-fluid {
 	padding-left: 0px;
 	padding-right: 0px;
+}
+
+.backgound-image {
 	background: url('../images/sx_bg.jpg') no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -34,22 +46,26 @@ a {
 	onclick: ga('send', 'event', 'link');
 }
 
+
 .img_since {
 	min-height: 3em;
 }
 
 .img_logo {
-	margin-top: 2em;
+	margin-top: 3em;
 	min-height: 8em;
 }
 
 .img_titel {
-	margin-top: 4em;
+	margin-top: 6em;
 	min-height: 5em;
+}
+.img_media {
+	margin-top: 2em;
 }
 
 .img_uc {
-	margin-top: 2em;
+	margin-top: 1em;
 	min-height: 1em;
 }
 
@@ -59,41 +75,54 @@ a {
 	padding-right: 0.3em;
 }
 
-@media ( max-width : 480px) {
+@media screen and ( orientation : landscape){
+	.landscape {
+		visibility: visible;
+	}
+	.portrait {
+		visibility: hidden;
+	}
+	.spacer {
+		margin-top: 0em;
+	}
+} 
+@media screen and ( orientation : portrait){
+	.landscape {
+		visibility: hidden;
+	}
+	.portrait {
+		visibility: visible;
+	}
+	.spacer {
+		margin-top: 4em;
+	}
+} 
+
+@media screen and ( max-width : 480px) {
 	body {
 		font-size: 10px;
 	}
 }
-/*
-@media ( min-width : 480px) {
-	.container-fluid {
-		background: url('../images/sx_bg.jpg') no-repeat center center fixed;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-	}
-}
-*/
-@media ( min-width : 480px) and (max-width: 768px) {
+
+@media screen and ( min-width : 480px) and (max-width: 768px) {
 	body {
 		font-size: 14px;
 	}
 }
 
-@media ( min-width : 768px) and (max-width: 992px) {
+@media screen and ( min-width : 768px) and (max-width: 992px) {
 	body {
 		font-size: 18px;
 	}
 }
 
-@media ( min-width : 992px) and (max-width: 1200px) {
+@media screen and ( min-width : 992px) and (max-width: 1200px) {
 	body {
 		font-size: 24px;
 	}
 }
 
-@media ( min-width : 1200px) {
+@media screen and ( min-width : 1200px) {
 	body {
 		font-size: 32px;
 	}
