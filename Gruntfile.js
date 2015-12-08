@@ -4,12 +4,18 @@
 
 module.exports = function(grunt) {
 
+	grunt.loadNpmTasks('grunt-ftp-push');
+	grunt.loadNpmTasks('grunt-contrib-clean');
+	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-subgrunt');
+
+	
 	grunt.initConfig({
 
-		
 		clean : {
 			css : [ 'WebContent/css/*', '!WebContent/css/sx*' ],
-			js : [ 'WebContent/js/**/bootstrap*', 'WebContent/js/**/npm.js', 'WebContent/js/umd/**' ]
+			js : [ 'WebContent/js/**/bootstrap*', 'WebContent/js/**/npm.js',
+					'WebContent/js/umd/**' ]
 		},
 
 		subgrunt : {
@@ -37,14 +43,33 @@ module.exports = function(grunt) {
 				dest : 'WebContent',
 				expand : true
 			}
+		},
+
+		ftp_push : {
+			solexin : {
+				options : {
+					/*
+					username : "web95",
+					password : "solexin",
+					*/
+					authKey : "serverA",
+					host : "ftp.solexin.ch",
+					dest : "/html/soleXinUC",
+					port : 21
+				},
+				files : [ {
+					expand : true,
+					cwd : 'WebContent',
+					src : [ "**" ]
+				} ]
+			}
 		}
+
 	});
 
-	grunt.loadNpmTasks('grunt-contrib-clean');
-	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-subgrunt');
 
 	grunt.registerTask('bs', [ 'subgrunt:dist' ]);
 	grunt.registerTask('default', [ 'bs', 'clean', 'copy:files' ]);
+	grunt.registerTask('deploy', [ 'ftp_push' ]);
 
 }
