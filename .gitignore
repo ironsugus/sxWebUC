@@ -1,3 +1,4 @@
 # ignore osx files
 .DS_Store
 /node_modules/
+/.ftpauth

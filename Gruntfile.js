@@ -48,11 +48,7 @@ module.exports = function(grunt) {
 		ftp_push : {
 			solexin : {
 				options : {
-					/*
-					username : "web95",
-					password : "solexin",
-					*/
-					authKey : "serverA",
+					authKey : "serverA", // reference to .ftpauth file 
 					host : "ftp.solexin.ch",
 					dest : "/html/soleXinUC",
 					port : 21
